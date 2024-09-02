@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: hsl(0, 0%, 99%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Hanken Grotesk", sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+.card {
+  width: 800px;
+  margin: 80px 40px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 25px;
+  display: flex;
+}
+.card-left,
+.card-right {
+  width: 50%;
+  padding: 40px;
+}
+.card-left > *,
+.card-right > * {
+  padding-bottom: 60px;
+}
+
+/* LEFT SIDE */
+.card-left {
+  color: #fff;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 25px;
+  text-align: center;
+}
+.card-left h2 {
+  opacity: 0.6;
+}
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  margin: 0 auto 30px auto;
+}
+.circle-big {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  font-size: 4rem;
+  font-weight: bold;
+  transform: translateX(-50%);
+}
+.circle-low {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+.description {
+  opacity: 0.7;
+  padding: 0 50px;
+}
+
+/* RIGHT SIDE */
+.card-right {
+  background-color: #fff;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.card-right .stats .stats-tab {
+  display: flex;
+  justify-content: space-between;
+  color: red;
+  background-color: hsl(0, 100%, 95%);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.card-right .stats .stats-tab.second {
+  background-color: hsl(39, 100%, 95%);
+  color: orange;
+}
+.card-right .stats .stats-tab.third {
+  background-color: hsl(166, 100%, 95%);
+  color: green;
+}
+.card-right .stats .stats-tab.fourth {
+  background-color: hsl(234, 85%, 95%);
+  color: blue;
+}
+.card-right .stats .stats-tab .tab-l {
+  display: flex;
+  gap: 10px;
+}
+.card-right .stats .stats-tab .tab-l .tab-activity {
+  font-weight: bold;
+}
+
+.card-right .stats .stats-tab .tab-points {
+  display: flex;
+  gap: 10px;
+  color: black;
+}
+.card-right .stats .stats-tab .tab-points p:first-child {
+  font-weight: bold;
+}
+.card-right .stats .stats-tab .tab-points p:last-child {
+  opacity: 0.7;
+}
+
+.btn {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 50px;
+  text-decoration: none;
+  padding: 20px;
+}
+.btn:hover {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    padding: 0;
+  }
+  .card {
+    flex-direction: column;
+    margin: 0px;
+  }
+  .card-left,
+  .card-right {
+    width: 100%;
+  }
+  .card-left {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .description {
+    padding: 0;
+  }
+  .card-right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/

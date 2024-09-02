@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --main-color: hsl(47, 88%, 63%);
+  --secondary-color: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 380px;
+  border: 1px solid black;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 25px;
+  box-shadow: 8px 8px 0px 0px rgba(66, 68, 90, 1);
+}
+.card > * {
+  margin-bottom: 20px;
+}
+.card .card-img {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+}
+.card .card-preTitle {
+  display: inline;
+  padding: 5px 10px;
+  background-color: var(--main-color);
+  color: hsl(0, 0%, 7%);
+  margin-bottom: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.card .card-date {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.card .card-title {
+  font-size: 1.5rem;
+}
+.card .card-title:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.card .card-description {
+  color: hsl(0, 0%, 50%);
+}
+
+.card .card-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0px;
+}
+.card .card-container h2 {
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    max-width: 330px;
+  }
+  .card .card-title {
+    font-size: 1.3rem;
+  }
+  .card .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/

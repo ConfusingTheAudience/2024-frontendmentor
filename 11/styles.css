@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 75%, 39%);
+
+  font-family: "Kumbh Sans", sans-serif;
+  position: relative;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.pattern-one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-25%, -50%);
+}
+.pattern-two {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(25%, 50%);
+  z-index: -1;
+}
+
+.card {
+  width: 350px;
+  background-color: #fff;
+
+  border-radius: 8px;
+  margin: 20px 40px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-top {
+  position: relative;
+}
+.card-photo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-photo img {
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.card-bottom > * {
+  padding: 15px 0 15px 0;
+}
+
+.card-bottom .person-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-top: 60px;
+}
+.card-bottom .person-info p {
+  opacity: 0.8;
+}
+
+.card-bottom .person-location {
+  padding-top: 0;
+  padding-bottom: 25px;
+  opacity: 0.9;
+}
+
+.card-bottom .person-details {
+  display: flex;
+  position: relative;
+  padding: 30px 0;
+}
+.card-bottom .person-details::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid black;
+  opacity: 0.1;
+}
+.card-bottom .person-details .detail-box {
+  width: 33%;
+  flex-grow: 1;
+}
+.card-bottom .person-details .detail-description {
+  padding-top: 5px;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 700px) {
+  .pattern-one {
+    position: absolute;
+    top: -10%;
+    left: -135%;
+  }
+  .pattern-two {
+    position: absolute;
+    bottom: 40px;
+    right: -510px;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/

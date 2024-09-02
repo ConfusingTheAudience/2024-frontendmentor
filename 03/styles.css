@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+
+:root {
+  --main-color: hsl(30, 54%, 90%);
+  --titleSection-color: hsl(14, 45%, 36%);
+  --preparationTitle-color: hsl(332, 51%, 32%);
+  --preparationBackground-color: hsl(330, 100%, 98%);
+  --borders-color: hsl(30, 18%, 87%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Young Serif", serif;
+}
+.card {
+  width: 800px;
+  margin: 80px 40px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 25px;
+}
+.card > * {
+  margin: 0 40px 40px 40px;
+}
+.card .card-img {
+  display: block;
+  width: 90%;
+  border-radius: 15px;
+  margin: 40px auto 40px auto;
+}
+.card .card-title {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+.card .card-description {
+  color: hsl(24, 5%, 18%);
+  opacity: 0.7;
+}
+.preparation {
+  background-color: var(--preparationBackground-color);
+  padding: 30px;
+  border-radius: 5px;
+}
+.preparation .preparation-title {
+  color: var(--preparationTitle-color);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.preparation .preparation-details {
+  padding-left: 25px;
+}
+.preparation .preparation-details > * {
+  margin-bottom: 10px;
+}
+.preparation .preparation-details span,
+.instructions .instructions-details span {
+  font-weight: bold;
+}
+.preparation .preparation-details li {
+  color: hsl(24, 5%, 18%);
+  opacity: 0.8;
+  padding-left: 15px;
+}
+.preparation .preparation-details li::marker {
+  color: var(--preparationTitle-color);
+}
+.ingredients-title,
+.instructions-title,
+.nutrition-title {
+  color: var(--titleSection-color);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.ingredients .ingredients-details > *,
+.instructions .instructions-details > *,
+.nutrition .nutrition-table > * {
+  margin-bottom: 10px;
+}
+.ingredients .ingredients-details,
+.instructions .instructions-details {
+  padding-left: 25px;
+}
+.ingredients .ingredients-details li {
+  font-family: "Outfit", sans-serif;
+  opacity: 0.6;
+  padding-left: 15px;
+}
+.ingredients .ingredients-details li::marker,
+.instructions .instructions-details li::marker {
+  color: var(--titleSection-color);
+}
+.instructions .instructions-details li {
+  list-style-type: decimal;
+  opacity: 0.6;
+  padding-left: 15px;
+}
+.ingredients,
+.instructions {
+  border-bottom: 1px solid var(--borders-color);
+  padding-bottom: 30px;
+}
+
+.nutrition > * {
+  margin-bottom: 20px;
+}
+.nutrition .nutrition-description {
+  opacity: 0.6;
+}
+.nutrition .nutrition-table {
+  padding-bottom: 20px;
+}
+.nutrition .nutrition-table .table-set {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--borders-color);
+  padding: 5px 5px 5px 40px;
+}
+.nutrition .nutrition-table .table-set h3 {
+  font-weight: normal;
+  flex-basis: 50%;
+  opacity: 0.7;
+}
+.nutrition .nutrition-table .table-set p {
+  color: hsl(14, 45%, 36%);
+  flex-basis: 50%;
+  font-weight: bold;
+  font-family: "Source Sans Pro";
+  /* define standard font to fix kcal line */
+}
+.nutrition .nutrition-table .table-setLast {
+  border-bottom: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    margin: 0;
+    border-radius: 0;
+  }
+  .card .card-img {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0;
+  }
+  .card .card-title {
+    margin-top: 40px;
+    font-size: 2rem;
+  }
+  .card .card-description {
+    font-size: 14px;
+  }
+  .nutrition .nutrition-description {
+    font-size: 0.85rem;
+  }
+  .nutrition .nutrition-table {
+    padding-bottom: 0;
+  }
+  .nutrition .nutrition-table .table-set {
+    justify-content: space-around;
+  }
+  .nutrition .nutrition-table .table-set h3 {
+    flex-basis: 50%;
+  }
+  .nutrition .nutrition-table .table-set p {
+    flex-basis: 50%;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive - on 375px ingredients didn't match due to wrong font family
+*/
