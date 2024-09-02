@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  height: 100%;
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.addPattern {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+
+  background-image: url(images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-top .nav .nav-list {
+  display: flex;
+  gap: 50px;
+}
+.header-top .nav .nav-list .nav-item {
+  list-style-type: none;
+}
+.header-top .nav .nav-list .nav-item a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.header-bottomLeft,
+.header-bottomRight {
+  width: 50%;
+}
+.header-bottomLeft {
+  position: relative;
+}
+.header-bottomLeft h1 {
+  font-size: 45px;
+  line-height: 1.5;
+}
+.header-bottomLeft p {
+  font-size: 21px;
+  line-height: 1.25;
+  margin: 20px 0;
+}
+.header-bottomRight img {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+.form .form-input {
+  padding: 15px 10px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  outline: none;
+}
+.form .form-input::placeholder {
+  color: rgb(212, 212, 212);
+}
+
+.form .form-btn {
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 50px;
+  color: #fff;
+  background: hsl(224, 93%, 58%);
+  border-color: hsl(224, 93%, 58%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.form .form-btn:hover {
+  cursor: pointer;
+  background-color: hsl(224, 93%, 68%);
+  border-color: hsl(224, 93%, 68%);
+}
+
+.section1 {
+  display: flex;
+  padding: 50px;
+  padding-bottom: 150px;
+  background-color: #f8f8fe;
+}
+
+.section1Left {
+  width: 60%;
+}
+.section1Right {
+  width: 40%;
+}
+
+.section1Left h1 {
+  font-size: 45px;
+  margin-bottom: 40px;
+}
+.section1Left .section1Left-text {
+  width: 85%;
+  font-size: 21px;
+  line-height: 1.25;
+  margin: 20px 0;
+}
+.section1Left a {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 5px;
+  color: hsl(170, 45%, 43%);
+  margin-bottom: 30px;
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+}
+.section1Left a:hover {
+  color: hsl(170, 45%, 33%);
+}
+
+.section1Left .section1-testimonial {
+  width: 490px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.section1Left .section1-testimonial img {
+  width: 32px;
+  height: 32px;
+}
+.section1Left .section1-testimonial .testimonial-text {
+  font-size: 21px;
+  line-height: 1.5;
+  margin: 30px 0;
+}
+.section1Left .section1-testimonial .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section1Left .section1-testimonial .profile img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.section1Left .section1-testimonial .profile .profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.section1Right img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.section2 {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  color: #fff;
+  background-color: hsl(238, 22%, 44%);
+}
+
+.section2 .section2Left {
+  width: 60%;
+}
+.section2 .section2Right {
+  width: 40%;
+}
+
+.section2 .section2Left h1 {
+  font-size: 45px;
+}
+.section2 .section2Left p {
+  width: 80%;
+  font-size: 21px;
+  margin-top: 20px;
+}
+
+.section2 .section2Right .form {
+  gap: 20px;
+  flex-direction: column;
+}
+.section2 .section2Right .form .form-btn {
+  width: 60%;
+  height: 47px;
+  /* due to lack of equal size height in flexbox column need to define like that */
+  margin-left: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.footer {
+  padding: 50px;
+  color: #fff;
+  background-color: hsl(243, 87%, 12%);
+}
+
+.footer .footer-logo {
+  margin-bottom: 50px;
+}
+.footer-top {
+  display: flex;
+  gap: 100px;
+}
+.footer-topLeft > * {
+  margin-bottom: 25px;
+}
+.footer-topLeft {
+  width: 40%;
+}
+.footer-topMid,
+.footer-topRight {
+  width: 30%;
+}
+.phone,
+.email {
+  display: flex;
+  gap: 30px;
+}
+.phone-img,
+.email-img {
+  width: 10px;
+}
+.phone p,
+.email p {
+  width: 95%;
+}
+
+.footer-topMid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.footer-topMid .footer-topMidBox {
+  width: 50%;
+  height: 50px;
+}
+.footer-topMid .footer-topMidBox a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-topMid .footer-topMidBox a:hover {
+  color: hsl(224, 93%, 58%);
+}
+
+.footer-topRight .socials {
+  display: flex;
+  gap: 15px;
+}
+.footer-topRight .socials a {
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.footer-topRight .socials a:hover {
+  color: hsl(224, 93%, 58%);
+  border-color: hsl(224, 93%, 58%);
+}
+.fa-facebook-f:before,
+.fa-facebook:before,
+.fa-twitter-f:before,
+.fa-twitter:before,
+.fa-instagram-f:before,
+.fa-instagram:before {
+  display: flex;
+  justify-content: center;
+  line-height: 32px;
+}
+
+/* validation for from */
+.error {
+  display: none;
+  font-size: 14px;
+}
+.error1 {
+  font-size: 14px;
+  display: none;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+.form-input:invalid:not(:focus):not(:placeholder-shown) ~ .error,
+.form-input:invalid:not(:focus):not(:placeholder-shown) ~ .error1 {
+  display: block;
+  color: red;
+}
+.form-input:invalid:not(:focus):not(:placeholder-shown) {
+  border: 1px solid red;
+}
+
+@media (max-width: 1100px) {
+  .header {
+    height: max-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+  }
+  .header-top img {
+    width: 30%;
+  }
+  .header-top .nav .nav-list {
+    gap: 15px;
+  }
+
+  .header-bottom {
+    padding-bottom: 100px;
+    flex-direction: column-reverse;
+  }
+  .header-bottom h1 {
+    font-size: 24px;
+    margin: 25px 0;
+  }
+  .header-bottom p {
+    font-size: 15px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+  .form .form-btn {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .header-bottomLeft,
+  .header-bottomRight {
+    width: 100%;
+  }
+  .addPattern {
+    background-image: url(images/bg-curve-mobile.svg);
+  }
+
+  .section1 {
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .section1Left,
+  .section1Right {
+    width: 100%;
+  }
+  .section1Right img {
+    margin-bottom: 50px;
+  }
+  .section1Left h1 {
+    font-size: 19px;
+  }
+  .section1Left .section1Left-text {
+    font-size: 14px;
+    width: 100%;
+  }
+  .section1Left .section1-testimonial {
+    padding: 24px;
+    text-align: left;
+    width: 100%;
+  }
+  .section1Left .section1-testimonial img {
+    width: 24px;
+    height: 24px;
+  }
+  .section1Left .section1-testimonial .testimonial-text {
+    font-size: 12px;
+  }
+  .section1Left .section1-testimonial .profile img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .section2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    flex-direction: column;
+  }
+  .section2 .section2Left,
+  .section2 .section2Right {
+    width: 100%;
+  }
+  .section2 .section2Left h1 {
+    font-size: 24px;
+  }
+  .section2 .section2Left p {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .section2 .section2Right .form {
+    gap: 0;
+  }
+  .section2 .section2Right .form .form-btn {
+    width: 100%;
+  }
+
+  .footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .footer-top {
+    gap: 50px;
+    flex-direction: column;
+  }
+  .footer-topMid .footer-topMidBox {
+    width: 100%;
+  }
+  .footer-topLeft,
+  .footer-topMid,
+  .footer-topRight {
+    width: 100%;
+  }
+  .footer-topRight .socials {
+    justify-content: center;
+  }
+  /* making correct flex items order on footer */
+  .fjobs {
+    order: 2;
+  }
+  .fpress {
+    order: 3;
+  }
+  .fblog {
+    order: 4;
+  }
+  .fcontact {
+    margin-top: 50px;
+    order: 5;
+  }
+  .fterms {
+    order: 6;
+  }
+  .fprivacy {
+    order: 7;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/

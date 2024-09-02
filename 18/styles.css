@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
+  position: relative;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+
+  background-image: url(images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+}
+
+/* header */
+header {
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+header h1 {
+  margin: 40px 0 20px 0;
+  opacity: 0.8;
+}
+header p {
+  width: 45%;
+  margin: 0 auto 50px auto;
+  opacity: 0.8;
+}
+
+/* btn component */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.buttons .btn1 {
+  background-color: hsl(171, 66%, 44%);
+}
+.buttons .btn1:hover {
+  background-color: hsl(171, 66%, 55%);
+}
+.buttons .btn2 {
+  background-color: hsl(233, 100%, 69%);
+}
+.buttons .btn2:hover {
+  background-color: hsl(233, 100%, 79%);
+}
+
+/* section 1 */
+.section1 .section1-title {
+  opacity: 0.8;
+}
+.section1 .section1-description {
+  width: 50%;
+  margin: 20px auto 150px auto;
+  opacity: 0.8;
+}
+
+/* section 2 */
+.section2 {
+  display: flex;
+}
+.section2 .section2-left img {
+  width: 100%;
+  position: relative;
+  left: -30px;
+}
+.section2-left,
+.section2-right {
+  width: 50%;
+}
+.section2-right {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 60px;
+}
+.section2-right .section2-rightBox h3 {
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+.section2-right .section2-rightBox p {
+  width: 70%;
+  opacity: 0.8;
+}
+.section2-right .section2-rightBox2 {
+  margin: 70px 0;
+}
+
+/* section 3 */
+.section3 .section3-title {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.section3 .section3-description {
+  width: 50%;
+  margin: 20px auto 80px auto;
+  opacity: 0.8;
+}
+
+/* section 4 */
+.section4 .section4-title {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.section4 .section4-description {
+  margin: 20px auto 80px auto;
+  opacity: 0.8;
+}
+.section4 .section4-info {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.section4 .section4-infoBox {
+  width: 33%;
+}
+.section4 .section4-info h4 {
+  margin: 30px 0 20px 0;
+  opacity: 0.8;
+}
+.section4 .section4-infoBox p {
+  width: 85%;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+.section4 .section4-partners {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* section 5 */
+.section5 {
+  padding-bottom: 150px;
+}
+.section5 .section5-title {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.section5 .section5-description {
+  width: 45%;
+  margin: 20px auto 60px auto;
+  opacity: 0.8;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+  background-color: hsl(200, 12%, 90%);
+}
+.footer .footer-footnote {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .footer-footnote .box {
+  width: 33%;
+  text-align: left;
+  padding: 15px;
+}
+.footer .footer-footnote a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.8;
+}
+.footer .footer-footnote a:hover {
+  color: hsl(171, 66%, 44%);
+}
+.footer .footer-icons {
+  display: flex;
+  gap: 20px;
+}
+.footer .footer-icons path:hover {
+  cursor: pointer;
+  fill: hsl(171, 66%, 44%);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    background-image: url(images/bg-header-mobile.png);
+    background-size: cover;
+  }
+  header,
+  main {
+    padding: 0 15px;
+  }
+
+  header p {
+    width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons a {
+    padding: 20px;
+  }
+  .buttons .btn1,
+  .buttons .btn2 {
+    width: 100%;
+  }
+
+  .section1 .section1-description {
+    width: 100%;
+  }
+
+  .section2 {
+    flex-direction: column;
+  }
+  .section2-left,
+  .section2-right {
+    width: 100%;
+  }
+  .section2 .section2-left img {
+    left: 0;
+  }
+  .section2-right {
+    padding: 60px 0 60px 0;
+    text-align: center;
+  }
+  .section2-right .section2-rightBox p {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section3 img {
+    width: 100%;
+  }
+  .section3 .section3-description {
+    width: 100%;
+  }
+
+  .section4 .section4-info {
+    flex-direction: column;
+  }
+  .section4 .section4-infoBox {
+    width: 100%;
+    margin: 30px 0;
+  }
+  .section4 .section4-infoBox p {
+    width: 100%;
+  }
+
+  .section4 .section4-partners {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .section5 .section5-title {
+    font-size: 30px;
+  }
+  .section5 .section5-description {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+  .footer .footer-footnote {
+    flex-direction: column;
+    margin: 50px 0;
+  }
+  .footer .footer-footnote .box {
+    width: 100%;
+    text-align: center;
+  }
+  .footer .footer-icons {
+    gap: 50px;
+  }
+
+  .footer .footer-footnote .footnote-cu {
+    order: 2;
+  }
+  .footer .footer-footnote .footnote-pp {
+    order: 3;
+  }
+  .footer .footer-footnote .footnote-pk {
+    order: 4;
+  }
+  .footer .footer-footnote .footnote-ig {
+    order: 5;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/
