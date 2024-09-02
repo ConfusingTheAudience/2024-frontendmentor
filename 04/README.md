@@ -1,3 +1,3 @@
-3-column preview card component
+Results summary component
 
-challenge link: https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-
+challenge link: https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV
