@@ -10,6 +10,7 @@ Full frontendmentor challenges
 
 // 29-36 JUNIOR LEVEL with JS
 
+--------------------------------------
 
 // 32 - ENABLE LIVESERVER + NODE MODULES TO WORK
 
