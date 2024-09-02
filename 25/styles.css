@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --main-color: hsl(210, 46%, 95%);
+  --secondary-color: hsl(217, 19%, 35%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+.card {
+  width: 900px;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-left {
+  width: 40%;
+}
+.card-left img {
+  display: block;
+  object-fit: cover;
+  /* 120% to pixel perfect img from challenge - normally 100 */
+  width: 120%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.card-right {
+  width: 60%;
+  background-color: #fff;
+  padding: 40px;
+  position: relative;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.card-right > * {
+  margin-bottom: 20px;
+}
+
+.card-right .title {
+  opacity: 0.9;
+}
+.card-right .description {
+  font-size: 17px;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+.card-right .card-rightBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-rightBottom .person-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.card-rightBottom .person-info img {
+  width: 15%;
+  border-radius: 50%;
+}
+
+.card-rightBottom .person-info .person-details h3 {
+  margin-bottom: 10px;
+}
+
+.card-rightBottom .person-share {
+  background: var(--main-color);
+  padding: 10px;
+  border-radius: 50%;
+}
+.card-rightBottom .person-share:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+.card-rightBottom .person-share .img {
+  user-select: none;
+}
+
+/* pattern */
+.addPatern {
+  display: none;
+  position: absolute;
+  right: -95px;
+  bottom: 135px;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 25px 60px;
+  gap: 20px;
+  border-radius: 8px;
+  margin: 0;
+}
+.addPatern::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translate(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid var(--secondary-color);
+}
+.addPatern::before {
+  width: 10%;
+  height: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -50%;
+}
+.addPatern span {
+  color: var(--main-color);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.show {
+  display: flex;
+}
+
+/* media queries */
+@media (max-width: 900px) {
+  .card {
+    width: 90vw;
+    flex-direction: column;
+    margin: 50px 0;
+  }
+  .card-left,
+  .card-right {
+    width: 100%;
+  }
+
+  .card-left img {
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .card-right {
+    padding: 40px 24px 30px 24px;
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .card-right .title {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .card-right .description {
+    font-size: 15px;
+    margin-bottom: 60px;
+  }
+
+  .card-rightBottom .person-info img {
+    width: 20%;
+  }
+
+  .card-rightBottom .person-share {
+    position: relative;
+    z-index: 1;
+  }
+
+  .addPatern {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 65px 60px;
+    border-radius: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .addPatern::before,
+  .addPatern::after {
+    display: none;
+  }
+  .card-rightBottom .person-share:hover {
+    background-color: hsl(214, 17%, 51%);
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/

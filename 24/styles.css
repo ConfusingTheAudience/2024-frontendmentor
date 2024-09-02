@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --main-color: hsl(216, 12%, 8%);
+  --secondary-color: hsl(213, 19%, 24%);
+  --hover-color: hsl(25, 97%, 53%);
+  --white-color: hsl(0, 0%, 100%);
+  --circleText-color: hsl(217, 12%, 63%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  position: relative;
+}
+.card,
+.voted {
+  display: none;
+  width: 430px;
+  height: 450px;
+  border-radius: 25px;
+  background: radial-gradient(
+    circle at top,
+    hsl(213, 19%, 24%) 0,
+    hsl(213, 19%, 18%) 30%
+  );
+  padding: 45px;
+}
+.card > *,
+.voted > * {
+  margin-bottom: 30px;
+}
+
+.card .star {
+  width: 15%;
+  background: var(--secondary-color);
+  padding: 15px;
+  border-radius: 50%;
+}
+.card .title {
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+.card .description,
+.voted .description {
+  color: var(--white-color);
+  opacity: 0.4;
+  line-height: 1.5;
+}
+
+.card-rater {
+  display: flex;
+  justify-content: space-between;
+  color: var(--circleText-color);
+}
+.card-rater .rate-circle {
+  padding: 25px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-rater .rate-circle:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: var(--hover-color);
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  background: var(--hover-color);
+  padding: 10px 0;
+  margin: 0;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+}
+.btn:hover {
+  color: #000;
+  background-color: var(--white-color);
+}
+
+/* second page */
+.voted {
+  padding: 25px 45px;
+  color: var(--white-color);
+  text-align: center;
+}
+.voted .voted-illustration {
+  display: block;
+  margin: 30px auto;
+}
+.voted .voted-picked {
+  display: inline-block;
+  color: var(--hover-color);
+  background-color: var(--secondary-color);
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+/* add class */
+.show {
+  display: block;
+}
+.rate-circle.picked {
+  color: #000;
+  background-color: #fff;
+}
+
+/* media queries */
+@media (max-width: 500px) {
+  .card,
+  .voted {
+    padding: 20px;
+    width: 90vw;
+    height: max-content;
+  }
+  .card-rater .rate-circle {
+    padding: 20px;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/
