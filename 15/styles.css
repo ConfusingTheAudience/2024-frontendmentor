@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Open Sans", sans-serif;
+}
+html,
+body {
+  width: 100%;
+}
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  background-image: url(images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: hsl(257, 40%, 49%);
+}
+.card {
+  width: 100%;
+  position: relative;
+}
+
+.card-middle {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 70px;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+.card-logo,
+.footer {
+  position: absolute;
+}
+
+.card-illustration {
+  padding-top: 45px;
+  padding-left: 60px;
+}
+
+.text {
+  height: 100%;
+  padding: 180px 0 0 0;
+  color: #fff;
+}
+.text h1 {
+  font-size: 2.5rem;
+}
+.text p {
+  margin: 30px 0;
+  opacity: 0.95;
+}
+.text a {
+  display: inline-block;
+  font-size: 1.1rem;
+  text-decoration: none;
+  background-color: #fff;
+  color: hsl(257, 40%, 49%);
+  padding: 15px 60px;
+  margin: 0 auto 0 0;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.text a:hover {
+  color: #fff;
+  background-color: hsl(300, 69%, 71%);
+}
+
+.card-logo {
+  position: absolute;
+  top: 70px;
+  left: calc(70px + 60px);
+}
+.footer {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: 80px;
+}
+.footer a {
+  width: 64px;
+  height: 64px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.footer a:hover {
+  color: hsl(300, 69%, 71%);
+  border-color: hsl(300, 69%, 71%);
+}
+.fa-facebook-f:before,
+.fa-facebook:before,
+.fa-twitter-f:before,
+.fa-twitter:before,
+.fa-instagram-f:before,
+.fa-instagram:before {
+  display: flex;
+  justify-content: center;
+  line-height: 64px;
+}
+
+/* Responsive*/
+@media (max-width: 1430px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-size: contain;
+    background-position: 0 0;
+  }
+  .card-logo {
+    width: 50%;
+    position: relative;
+    top: 0;
+    left: -80px;
+    margin: 30px 0 30px 0;
+  }
+  .card {
+    text-align: center;
+    padding: 0 25px;
+  }
+  .text {
+    padding: 0;
+  }
+  .card-middle {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    height: max-content;
+  }
+  .card-middle .card-illustration {
+    width: 100%;
+    padding: 0;
+  }
+  .card-middle .text h1 {
+    font-size: 1.8rem;
+    margin: 50px 0;
+  }
+  .card-middle .text a {
+    margin: 80px 0;
+    padding: 10px 90px;
+  }
+  .card-middle .text p {
+    margin: 20px 0;
+  }
+  .footer {
+    right: 50%;
+    transform: translate(50%);
+  }
+  .footer a {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  .fa-facebook-f:before,
+  .fa-facebook:before,
+  .fa-twitter-f:before,
+  .fa-twitter:before,
+  .fa-instagram-f:before,
+  .fa-instagram:before {
+    line-height: 32px;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/

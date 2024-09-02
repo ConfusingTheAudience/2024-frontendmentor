@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "League Spartan", sans-serif;
+  position: relative;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+.pattern-one {
+  background-image: url(images/bg-pattern-top-desktop.svg);
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.pattern-two {
+  background-image: url(images/bg-pattern-bottom-desktop.svg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  background-color: #fff;
+}
+
+/* TOP */
+.card-top,
+.card-bottom,
+.starsBox {
+  display: flex;
+}
+.card-topLeft {
+  width: 40%;
+}
+.card-topRight {
+  width: 60%;
+}
+.card-top .card-topLeft h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 4rem;
+  /* width: 50%; */
+  color: hsl(300, 43%, 22%);
+}
+.card-top .card-topLeft p {
+  font-size: 1.3rem;
+  padding: 20px 0;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.stars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.stars > * {
+  margin-top: 20px;
+}
+.starsBox {
+  width: 60%;
+  background-color: hsl(300, 24%, 96%);
+  padding: 20px;
+  gap: 5px;
+  border-radius: 8px;
+}
+.starsBox p {
+  color: hsl(300, 43%, 22%);
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.starsBox1 {
+  margin-right: 150px;
+}
+.starsBox2 {
+  margin-right: 100px;
+}
+
+/* BOTTOM */
+.card-bottom {
+  margin-top: 40px;
+}
+.opinionBox {
+  flex-grow: 1;
+  background-color: hsl(300, 43%, 22%);
+  padding: 51px;
+  margin: 20px;
+  border-radius: 8px;
+}
+.opinionBox .opinion-top {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.opinionBox .opinion-top img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.opinionBox .opinion-top .opinion-verification h2 {
+  color: #fff;
+}
+.opinionBox .opinion-top .opinion-verification p {
+  margin-top: 5px;
+  color: hsl(333, 80%, 67%);
+  opacity: 0.9;
+}
+
+.opinionBox .opinion-bottom p {
+  color: #fff;
+  line-height: 1.5;
+}
+
+.opinionBox1 {
+  position: relative;
+  top: -20px;
+  left: -20px;
+}
+
+.opinionBox3 {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+/* Responsive*/
+@media (max-width: 1030px) {
+  body {
+    position: relative;
+  }
+  .pattern-one img {
+    background-image: url(images/bg-pattern-top-mobile.svg);
+  }
+  /* .pattern-two img {
+    background-image: url(images/bg-pattern-bottom-mobile.svg);
+    background-position: center;
+    background-size: cover;
+  } */
+  .pattern-two {
+    display: none;
+    height: 25%;
+  }
+  .card {
+    padding: 0;
+  }
+  .card-top {
+    flex-direction: column;
+  }
+  .card-top .card-topLeft {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .card-top .card-topLeft h1 {
+    font-size: 3rem;
+  }
+  .card-top .card-topLeft p {
+    font-size: 1.2rem;
+    padding: 20px 10px;
+  }
+  .starsBox {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  .stars {
+    align-items: center;
+  }
+  .card-topLeft,
+  .card-topRight {
+    width: 100%;
+  }
+  .card-bottom {
+    margin-top: 0;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  .opinionBox {
+    padding: 41px;
+  }
+  .opinionBox1,
+  .opinionBox3 {
+    top: 0;
+    left: 0;
+  }
+  .opinionBox3 {
+    margin-bottom: 100px;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/
