@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mask"></div>
+      <header>
+        <!-- desktop nav -->
+        <nav class="desktop-nav">
+          <img src="images/logo.svg" alt="logo" class="logo"/>
+          <ul>
+
+            <li class="navItem desktop-features">
+              
+              <a href="#" class="desktop-navLink">Features <img src="images/icon-arrow-down.svg" alt="" data-stan="closed"></a>
+
+              <ul class="desktop-drop drop-one">
+                <li><a href="#"><img src="images/icon-todo.svg" alt=""> Todo List</a></li>
+                <li><a href="#"><img src="images/icon-calendar.svg" alt=""> Calendar</a></li>
+                <li><a href="#"><img src="images/icon-reminders.svg" alt=""> Reminders</a></li>
+                <li><a href="#"><img src="images/icon-planning.svg" alt=""> Planning</a></li>
+              </ul>
+
+            </li>
+
+            <li class="navItem desktop-company">
+
+              <a href="#" class="desktop-navLink">Company <img src="images/icon-arrow-down.svg" alt="" data-stan="closed"></a>
+
+              <ul class="desktop-drop drop-two">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+
+            </li>
+
+            <li class="navItem"><a href="#" class="desktop-navLink">Careers</a></li>
+
+            <li class="navItem"><a href="#" class="desktop-navLink">About</a></li>
+
+          </ul>
+          <div class="login-panel">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="register">Register</a>
+          </div>
+        </nav>
+        <!-- desktop nav -->
+        <!-- mobile nav -->
+          <nav class="mobile-nav">
+            <img src="images/logo.svg" alt="logo" class="logo"/>
+            <img src="images/icon-menu.svg" alt="" class="mobile-navIcon">
+          </nav>
+        <!-- mobile nav -->
+        </header>
+        <!-- mobile menu -->
+        <div class="mobile-menu">
+          <ul>
+
+            <li class="navItem mobile-features">
+              
+              <a href="#" class="mobile-navLink">Features <img src="images/icon-arrow-down.svg" alt="" data-stan="closed"></a>
+
+              <ul class="mobile-drop">
+                <li><a href="#"><img src="images/icon-todo.svg" alt=""> Todo List</a></li>
+                <li><a href="#"><img src="images/icon-calendar.svg" alt=""> Calendar</a></li>
+                <li><a href="#"><img src="images/icon-reminders.svg" alt=""> Reminders</a></li>
+                <li><a href="#"><img src="images/icon-planning.svg" alt=""> Planning</a></li>
+              </ul>
+
+            </li>
+
+            <li class="navItem mobile-company">
+
+              <a href="#" class="mobile-navLink mobile-navLink">Company <img src="images/icon-arrow-down.svg" alt="" data-stan="closed"></a>
+
+              <ul class="mobile-drop">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+
+            </li>
+
+            <li class="navItem"><a href="#" class="mobile-navLink">Careers</a></li>
+
+            <li class="navItem"><a href="#" class="mobile-navLink">About</a></li>
+
+          </ul>
+          <div class="login-panelMobile">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="register">Register</a>
+          </div>
+        </div>
+        <!-- mobile menu -->
+      <main class="main">
+          <div class="main-container">
+            <div class="left">
+              <h1>Make remote work</h1>
+              <p>Get your team in sync, no matter your location. Streamline processes, 
+                create team rituals, and watch productivity soar.</p>
+              <a href="#" class="btn">Learn more</a>
+              <div class="partners">
+                <img src="images/client-databiz.svg" alt="">
+                <img src="images/client-audiophile.svg" alt="">
+                <img src="images/client-meet.svg" alt="">
+                <img src="images/client-maker.svg" alt="">
+              </div>
+            </div>
+            <div class="right">
+            </div>
+          </div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

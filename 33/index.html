@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Notification page</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="top">
+        <h1>Notifications <span id="counter">3</span></h1>
+        <p id="mark">Mark all as read</p>
+      </div>
+      <div class="mid">
+        <!-- notif start -->
+        <div class="notification normalMobile unread">
+          <img src="assets/images/avatar-mark-webber.webp" alt="avatar">
+          <div class="notification-content">
+            <div class="tag unreadTag"><h2>Mark Webber</h2><span>reacted to your recent post</span><span class="event">My first tournament today!</span></div>
+            <p>1m ago</p>
+          </div>
+        </div>
+        <!-- notif end -->
+
+        <!-- notif start -->
+        <div class="notification unread">
+          <img src="assets/images/avatar-angela-gray.webp" alt="avatar">
+          <div class="notification-content">
+            <div class="tag unreadTag"><h2>Angela Grey</h2><span>followed you</span></div>
+            <p>5m ago</p>
+          </div>
+        </div>
+        <!-- notif end -->
+
+        <!-- notif start -->
+        <div class="notification normalMobile unread">
+          <img src="assets/images/avatar-jacob-thompson.webp" alt="avatar">
+          <div class="notification-content">
+            <div class="tag unreadTag"><h2>Jacob Thompson</h2><span>has joined your group</span><span class="event2">Chess Club</span></div>
+            <p>1 day ago</p>
+          </div>
+        </div>
+        <!-- notif end -->
+
+        <!-- notif start -->
+        <div class="notification normal">
+          <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="avatar">
+          <div class="notification-content">
+            <div class="tag "><h2>Rizky Hasanuddin</h2><span>sent you private message</span></div>
+            <p>5 days ago</p>
+            <p class="private">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+          </div>
+        </div>
+        <!-- notif end -->
+
+        <!-- notif start -->
+        <div class="notification normalMobile">
+          <img src="assets/images/avatar-kimberly-smith.webp" alt="avatar">
+          <div class="notification-content">
+            <div class="tag "><h2>Kimberly Smith</h2><span>commented on your picture</span></div>
+            <p>1 week ago</p>
+          </div>
+          <img src="assets/images/image-chess.webp" alt="" class="chess">
+        </div>
+        <!-- notif end -->
+
+        <!-- notif start -->
+        <div class="notification normal">
+          <img src="assets/images/avatar-nathan-peterson.webp" alt="avatar">
+          <div class="notification-content">
+            <div class="tag "><h2>Nathan Peterson</h2><span>reacted to your recent post</span><span class="event">5 end-game strategies to increase your win rate</span></div>
+            <p>2 weeks ago</p>
+          </div>
+        </div>
+        <!-- notif end -->
+
+        <!-- notif start -->
+        <div class="notification">
+          <img src="assets/images/avatar-anna-kim.webp" alt="avatar">
+          <div class="notification-content">
+            <div class="tag "><h2>Anna Kim</h2><span>left the group</span><span class="event2">Chess Club</span></div>
+            <p class="last">2 weeks ago</p>
+          </div>
+        </div>
+        <!-- notif end -->
+
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

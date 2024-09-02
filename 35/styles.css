@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --main-color: hsl(27, 66%, 92%);
+  --secondary-color: hsl(10, 79%, 65%);
+  --whitebase-color: #fff;
+  --blackbase-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 600px;
+}
+.card-top {
+  width: 100%;
+  height: 30%;
+  background-color: var(--secondary-color);
+  margin-bottom: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  color: var(--whitebase-color);
+}
+.card-info h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.card-info span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card-bottom {
+  width: 100%;
+  /* height: 70%; */
+  background-color: var(--whitebase-color);
+  border-radius: 25px;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+}
+.card-bottom h1 {
+  font-size: 2rem;
+}
+.card-dataContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  padding: 100px 0 50px 0;
+}
+.card-dataContainer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border: 1px solid rgb(206, 206, 206);
+  width: 100%;
+}
+/* data for js */
+.card-singleData {
+  width: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.dataInfo {
+  display: none;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--blackbase-color);
+  color: var(--whitebase-color);
+  border-radius: 8px;
+  padding: 10px;
+  opacity: 0.8;
+}
+.dataPole {
+  width: 120%;
+  height: 40px;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+}
+.dataName {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+/* data for js */
+.card-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 20px;
+}
+.card-amountLeft {
+  display: flex;
+  flex-direction: column;
+}
+.card-amountLeft span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.card-amountLeft p {
+  opacity: 0.8;
+}
+.card-amountRight {
+  display: flex;
+  flex-direction: column;
+}
+.card-amountRight span {
+  font-weight: bold;
+  text-align: right;
+}
+.card-amountRight p {
+  opacity: 0.8;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90vw;
+  }
+  .card-bottom h1,
+  .card-amountLeft span {
+    font-size: 1.1rem;
+  }
+  .card-amountLeft p,
+  .card-amountRight p {
+    font-size: 0.8rem;
+  }
+  .dataInfo {
+    z-index: 1;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/

@@ -1,0 +1,208 @@
+:root {
+  --main-color: hsl(210, 60%, 98%);
+  --secondary-color: hsl(0, 0%, 100%);
+  --unreadTag-color: hsl(1, 90%, 64%);
+  --notificationMain-color: hsl(219, 85%, 26%);
+  --unreadMessage-color: hsl(211, 68%, 94%);
+  --hoverMessage-color: hsl(205, 33%, 90%);
+  --timeAgo-color: hsl(219, 14%, 63%);
+  --text-color: hsl(219, 12%, 42%);
+  --peopleName-color: hsl(224, 21%, 14%);
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  font-size: 16px;
+  font-family: myFont;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 730px;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.top h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--peopleName-color);
+}
+.top h1 span {
+  color: var(--secondary-color);
+  background-color: var(--notificationMain-color);
+  padding: 3px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.top p {
+  color: var(--text-color);
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+}
+.notification-content h2 {
+  display: inline;
+  color: var(--peopleName-color);
+  font-size: 1rem;
+  font-weight: 900;
+}
+.notification-content .unreadTag {
+  display: inline;
+  position: relative;
+}
+.notification-content .unreadTag::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  bottom: 0;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--unreadTag-color);
+}
+.notification-content span {
+  color: var(--text-color);
+  font-weight: normal;
+  margin-left: 5px;
+}
+.notification-content .event {
+  font-weight: 900;
+}
+.notification-content .event2 {
+  font-weight: 900;
+  color: var(--notificationMain-color);
+}
+.notification-content p {
+  color: var(--timeAgo-color);
+  margin: 4px 0;
+}
+.notification-content .private {
+  color: var(--text-color);
+  border: 1px solid rgb(211, 211, 211);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.notification-content .last {
+  margin: 0;
+  margin-top: 8px;
+}
+.notification .chess {
+  margin-left: auto;
+}
+
+/* hovers */
+.top p:hover {
+  cursor: pointer;
+  color: var(--notificationMain-color);
+}
+.notification .chess:hover {
+  cursor: pointer;
+  border: 2px solid var(--hoverMessage-color);
+  border-radius: 8px;
+}
+.notification-content .private:hover {
+  cursor: pointer;
+  background-color: var(--hoverMessage-color);
+}
+.notification-content h2:hover,
+.notification-content .event:hover,
+.notification-content .event2:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 46%);
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+.notification.unread {
+  background-color: var(--unreadMessage-color);
+}
+.notification.normal {
+  align-items: flex-start;
+}
+
+@media (max-width: 500px) {
+  body {
+    align-items: normal;
+  }
+  .card {
+    padding: 19px;
+    padding-top: 50px;
+    border-radius: 0;
+  }
+
+  .top h1 {
+    font-size: 1rem;
+  }
+  .top h1 span {
+    padding: 2px 10px;
+  }
+  .top p {
+    font-size: 0.9rem;
+  }
+
+  .notification-content div,
+  .notification-content div h2,
+  .notification-content p {
+    font-size: 0.8rem;
+  }
+  .notification-content .unreadTag::after {
+    width: 8px;
+    height: 8px;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  .notification.normalMobile {
+    align-items: flex-start;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/

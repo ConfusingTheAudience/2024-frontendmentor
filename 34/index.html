@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Interactive card details form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <div class="cards">
+          <div class="front">
+            <img src="images/card-logo.svg" alt="logo">
+            <div id="card-numbers" class="front-numbers">0000 0000 0000 0000</div>
+            <div class="front-owner">
+              <span id="card-owner">Jane Appleseed</span>
+              <span id="card-date"><span id="card-date1">00</span>/<span id="card-date2">00</span></span>
+            </div>
+          </div>
+          <div class="back">
+            <div id="cvc">000</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <form action="" class="form" novalidate>
+          <div class="box">
+            <label for="name">cardholder name:</label>
+            <input type="text" onKeyPress="if(this.value.length==20) return false;" id="name" name="name" placeholder="e.g. Jane Appleseed" required />
+          </div>
+          <div id="errorForName" class="error">Can't be blank</div>
+          <div class="box">
+            <label for="cardNumber">card number:</label>
+           <input type="number" onKeyPress="if(this.value.length==16) return false;" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000" max="16" required/>
+          </div>
+          <div id="errorNumber" class="error">Wrong format, numbers only</div>
+          <div class="box1">
+            <div class="box1-child">
+              <label for="expDateFirst">exp. date (MM/YY)</label>
+              <div class="boxInputs">
+                <input type="number" onKeyPress="if(this.value.length==2) return false;" id="expDateFirst" name="expDate" placeholder="MM" required />
+                <input type="number" onKeyPress="if(this.value.length==2) return false;" id="expDateSec" name="expDate" placeholder="YY" required />
+              </div>
+              <div id="errorExpDate" class="error">Can't be blank</div>
+            </div>
+            <div class="box1-child">
+              <label for="cvcCode">cvc</label>
+              <input type="number" onKeyPress="if(this.value.length==3) return false;" id="cvcCode" name="cvc" placeholder="e.g. 123" required />
+              <div  id="errorCvc" class="error">Can't be blank</div>
+            </div>
+          </div>
+          <input type="submit" value="Confirm" class="btn">
+        </form>
+      </div>
+
+      <div class="modal hide">
+        <img src="images/icon-complete.svg" alt="completeIcon">
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button class="btn">Continue</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

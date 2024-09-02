@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --main-color: hsl(0, 0%, 98%);
+  --secondary-color: hsl(0, 0%, 8%);
+  --txt-color: hsl(0, 0%, 41%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--txt-color);
+}
+ul li {
+  list-style-type: none;
+}
+
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
+  background-color: var(--main-color);
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  height: 100%;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-nav .logo {
+  margin-right: 70px;
+}
+
+.desktop-nav ul {
+  display: flex;
+  gap: 30px;
+}
+.desktop-nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  user-select: none;
+}
+
+.desktop-nav .login-panel {
+  margin-left: auto;
+}
+.desktop-nav .login-panel a:hover {
+  color: var(--secondary-color);
+}
+.desktop-nav .login-panel .login {
+  margin-right: 30px;
+}
+.desktop-nav .login-panel .register {
+  border: 1px solid var(--txt-color);
+  padding: 15px 20px;
+  border-radius: 15px;
+}
+.desktop-nav .login-panel .register:hover {
+  border-color: black;
+}
+
+/* dropdowns */
+.desktop-nav .desktop-features,
+.desktop-nav .desktop-company {
+  position: relative;
+}
+.desktop-nav .desktop-drop {
+  display: none;
+  width: max-content;
+  position: absolute;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--main-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 30px;
+  border-radius: 8px;
+}
+.desktop-features .drop-one {
+  top: 30px;
+  right: 0;
+}
+.desktop-company .drop-two {
+  top: 30px;
+}
+
+/* main */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.main-container {
+  display: flex;
+  gap: 120px;
+  max-width: 1100px;
+  height: 600px;
+}
+.left {
+  width: 50%;
+}
+.right {
+  width: 50%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+.left h1 {
+  font-size: 4.5rem;
+  padding-top: 100px;
+}
+.left p {
+  line-height: 1.5;
+}
+.left .btn {
+  width: max-content;
+  padding: 20px 25px;
+  border-radius: 15px;
+  background: var(--secondary-color);
+  color: var(--main-color);
+  font-weight: bold;
+  border: 1px solid;
+}
+.left .btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+.left .partners {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right {
+  background-image: url(images/image-hero-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* mobile navigation */
+.mobile-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.mobile-nav .mobile-navIcon {
+  position: relative;
+  z-index: 1;
+}
+.mobile-navLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-menu {
+  display: none;
+  width: 65%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  padding-top: 50px;
+}
+.slide-in {
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-fill-mode: forwards;
+}
+/* add by js to animate close navigation */
+.slide-out {
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-name: slideout;
+}
+/* on slidein transform translateX isn't working because of whitespace problem */
+@keyframes slidein {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes slideout {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+
+.mobile-menu .navItem {
+  margin-bottom: 10px;
+}
+.mobile-menu ul {
+  padding: 40px;
+}
+.mobile-menu .mobile-drop {
+  display: none;
+  padding: 15px;
+}
+.mobile-menu .mobile-drop li {
+  margin-bottom: 15px;
+}
+.login-panelMobile .login,
+.login-panelMobile .register {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.login-panelMobile .login {
+  margin-bottom: 15px;
+}
+.login-panelMobile .register {
+  border: 1px solid var(--txt-color);
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin: 0 40px;
+}
+.login-panelMobile .register:hover {
+  border-color: black;
+}
+
+/* add by js */
+.desktop-nav .showDropdown {
+  display: flex;
+}
+.mobile-menu .mobile-drop.showDropdown {
+  display: block;
+}
+.desktop-nav .addTaggedLinkColor {
+  color: var(--secondary-color);
+}
+.show {
+  display: block;
+}
+/* mask */
+.mask {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+@media (max-width: 1200px) {
+  header {
+    position: relative;
+    padding: 30px;
+  }
+  .main {
+    height: calc(100% - 87px);
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+  .main-container {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  .left {
+    width: 95vw;
+    text-align: center;
+    margin-left: 0;
+  }
+  .left h1 {
+    font-size: 2rem;
+    padding-top: 50px;
+  }
+  .left p {
+    margin: 20px 0;
+  }
+  .left .btn {
+    margin: 0 auto;
+  }
+  .left .partners {
+    margin-top: 40px;
+  }
+  .right {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/image-hero-mobile.png);
+  }
+}
+@media (max-width: 360px) {
+  .left .partners {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/
