@@ -1,0 +1,189 @@
+:root {
+  --main-color: hsl(234, 29%, 20%);
+  --secondary-color: hsl(0, 0%, 100%);
+  --hover-color: hsl(4, 100%, 67%);
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  font-size: 16px;
+  font-family: myFont;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  width: 1000px;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.card-left {
+  width: 50%;
+}
+.card-right {
+  width: 50%;
+}
+
+.card-left {
+  padding: 100px 50px;
+}
+.card-left .title {
+  font-size: 3.5rem;
+}
+.card-left .description {
+  margin: 30px 0 40px 0;
+}
+
+.list {
+  margin-bottom: 70px;
+}
+.list > * {
+  margin-bottom: 20px;
+}
+.list .list-item {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.list .list-item img {
+  width: 7%;
+}
+
+.form .formBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.form .formBox label {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.form .formBox .error {
+  display: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: red;
+}
+.form input {
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid hsl(0, 0%, 59%);
+  outline: none;
+  cursor: pointer;
+}
+
+/* component */
+.btn {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background: var(--main-color);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+.card-right .img {
+  background-image: url(assets/images/illustration-sign-up-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100% 100%;
+  border-radius: 25px;
+  height: 100%;
+}
+
+/* modal */
+.modal {
+  width: 500px;
+  height: 500px;
+  background-color: var(--secondary-color);
+  padding: 60px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.modal img {
+  width: 20%;
+}
+.modal h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+.modal p {
+  margin: 20px 0;
+}
+.modal p span {
+  font-weight: bold;
+}
+.modal .btn {
+  margin-top: auto;
+}
+
+/* add via js */
+.hide {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .card {
+    flex-direction: column-reverse;
+    border-radius: 0;
+    padding: 0;
+  }
+  .card-left,
+  .card-right {
+    width: 100%;
+  }
+  .card-left {
+    padding: 50px 25px;
+  }
+  .card-left .title {
+    font-size: 2.5rem;
+  }
+
+  .card-right .img {
+    width: 100%;
+    content: url(./assets/images/illustration-sign-up-mobile.svg);
+    border-radius: 0;
+  }
+
+  .modal {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    padding: 100px 25px;
+  }
+}
+
+/* 
+NOTE 
+screen size preview: 1440px
+screen size preview: 375px
+responsive
+*/
