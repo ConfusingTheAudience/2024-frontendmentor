@@ -12,9 +12,7 @@ Full frontendmentor challenges
 
 --------------------------------------
 
-// 32 - ENABLE LIVESERVER + NODE MODULES TO WORK
-
-// 35 - ENABLE LIVESERVER TO WORK
+// 32 - ENABLE LIVESERVER + NODE MODULES TO WORK (TAILWIND USED)
 
 -------------------------------------
 
