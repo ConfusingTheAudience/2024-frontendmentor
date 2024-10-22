@@ -10,6 +10,8 @@ Full frontendmentor challenges
 
 // 29-36 JUNIOR LEVEL with JS
 
+// 37 React
+
 --------------------------------------
 
 // 32 - ENABLE LIVESERVER + NODE MODULES TO WORK (TAILWIND USED)
@@ -87,4 +89,6 @@ https://www.frontendmentor.io/challenges
 <b>35. Expenses chart component</b>
 
 <b>36. Intro section with dropdown navigation</b>
+
+<b>37. Product list with cart</b>
 
