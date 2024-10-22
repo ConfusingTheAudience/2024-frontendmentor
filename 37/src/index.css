@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("./assets/fonts/static/RedHatText-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CustomFont";
+  src: url("./assets/fonts/static/RedHatText-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CustomFont";
+  src: url("./assets/fonts/static/RedHatText-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "CustomFont";
+  font-size: 16px;
+}
+
+/* Main */
+.container {
+  padding: 25px;
+  background-color: var(--rose-50);
+  position: relative;
+  min-height: 100vh;
+}
+/* Desserts.jsx */
+.mainTitle {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.dessert {
+  width: 100%;
+}
+/* Left Side - SingleDesser.jsx */
+.containerForImg {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.imgWithoutIndicator {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  user-select: none;
+}
+.imgWithIndicator {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  user-select: none;
+  outline: 2px solid var(--main-color);
+}
+.indicator {
+  position: absolute;
+  left: 50%;
+  width: 60%;
+  height: 40px;
+  bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--rose-400);
+  background-color: var(--simple-white);
+  border-radius: 25px;
+  z-index: 0;
+  cursor: pointer;
+  font-weight: 600;
+  transform: translateX(-50%);
+}
+.indicator:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.indicatorQuantity {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+  width: 60%;
+  height: 40px;
+  bottom: -20px;
+  color: var(--simple-white);
+  border: 1px solid var(--rose-400);
+  background-color: var(--main-color);
+  transform: translateX(-50%);
+  border-radius: 25px;
+}
+.quantityIcon {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border: 1px solid var(--simple-white);
+  border-radius: 100%;
+  cursor: pointer;
+}
+.quantityIcon:hover {
+  background-color: var(--simple-white);
+}
+.quantityIcon:hover path {
+  fill: var(--main-color);
+}
+.quantityAmount {
+  user-select: none;
+}
+
+.containerForInfo {
+  padding: 30px 0;
+}
+.containerForInfo > * {
+  padding: 2px 0;
+}
+.dessertCategory {
+  opacity: 0.8;
+}
+.dessertName {
+  font-weight: 600;
+}
+.dessertPrice {
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+/* Right Side - Cart.jsx */
+.cart {
+  width: 100%;
+  height: 100%;
+  background-color: var(--simple-white);
+  padding: 20px;
+}
+.cartTitle {
+  color: var(--main-color);
+  padding-bottom: 40px;
+}
+.cartItem {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rose-100);
+}
+.cartProductTtitle {
+  display: block;
+  margin-bottom: 5px;
+}
+.cartInfo {
+  display: flex;
+  gap: 15px;
+}
+.cartQuantity {
+  color: var(--main-color);
+  font-weight: 600;
+}
+.cartSinglePrice {
+  opacity: 0.8;
+}
+.cartSingleTotalPrice {
+  font-weight: 600;
+  color: var(--rose-500);
+}
+.cartRemoveIcon {
+  border: 1px solid var(--rose-400);
+  border-radius: 50%;
+  padding: 4px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.cartRemoveIcon:hover {
+  filter: invert(16%) sepia(23%) saturate(868%) hue-rotate(336deg)
+    brightness(22%) contrast(56%);
+  border-color: var(--rose-900);
+}
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+.cartTotalTitle {
+  font-weight: normal;
+}
+.cartTotalPrice {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.cartBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--rose-100);
+  margin: 30px 0;
+  padding: 20px 5px;
+  border-radius: 8px;
+}
+.cartBanner span {
+  font-weight: 600;
+}
+.cartBtn {
+  font-size: 1.2rem;
+  color: var(--simple-white);
+  background-color: var(--main-color);
+  border: none;
+  padding: 15px 30px;
+  width: 100%;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.cartBtn:hover {
+  background-color: var(--mainHover-color);
+}
+.cartEmpty {
+  text-align: center;
+  font-weight: 600;
+  color: var(--rose-500);
+}
+
+/* modal - Modal.jsx */
+.modal {
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  left: 0;
+  bottom: 0;
+  background-color: var(--simple-white);
+  padding: 20px;
+  border-radius: 8px;
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalDescription {
+  opacity: 0.8;
+}
+.basketContainer {
+  padding: 20px;
+  margin: 30px 0;
+  background-color: var(--rose-50);
+  border-radius: 8px;
+}
+.basketItem {
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid var(--rose-100);
+  padding: 10px 0;
+}
+.basketImg {
+  width: 50px;
+  height: 50px;
+}
+.basketDetails {
+  display: flex;
+  gap: 20px;
+}
+.basketName {
+  font-weight: 600;
+}
+.basketPrice {
+  opacity: 0.8;
+}
+.basketQuantity {
+  color: var(--mainHover-color);
+}
+.basketSingleTotalPrice {
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.basketTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.basketTotalTitle {
+  font-weight: normal;
+}
+.basketTotalPrice {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.newOrderBtn {
+  font-size: 1.2rem;
+  color: var(--simple-white);
+  background-color: var(--main-color);
+  border: none;
+  padding: 15px 30px;
+  width: 100%;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.newOrderBtn:hover {
+  background-color: var(--mainHover-color);
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+  /* App.jsx */
+  .container {
+    display: flex;
+  }
+  /* Desserts.jsx */
+  .containerForDesserts {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .dessert {
+    width: 60%;
+  }
+  /* SingleDesser.jsx */
+  .indicator {
+    width: 75%;
+  }
+  /* Cart.jsx */
+  .cart {
+    width: 40%;
+  }
+  /* Modal.jsx */
+  .modal {
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* screen sizes 375px - 1440px */
+/* Mobile friendly */
